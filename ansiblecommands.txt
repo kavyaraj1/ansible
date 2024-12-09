@@ -1,0 +1,18 @@
+ansible dev -b -m copy -a "src=/home/ansible/file.txt dest=/home/ansible/sam"
+ansible dev -b -m copy -a "src=/home/ansible/file.txt dest=/home/ansible/sam"
+ansible dev -b -m file -a "path=/home/ansible/sam/file.txt state=absent"
+ansible dev -b -m shell -a "cd /home/ansible/sam"
+ansible dev -b -m file -a "path=/home/ansible/dev state=directory"
+ansible dev -b -m file -a "path=/home/ansible/dev state=absent"
+ansible dev -b -m file -a "path=/home/ansible/num.txt state=touch"
+ansible dev -b -m file -a "path=/home/ansible/num.txt state=absent"
+ansible dev -b -m file -a "path=/home/ansible/num.txt state=touch mode=0777"
+ansible dev -b -m file -a "path=/home/ansible/num.txt state=absent mode=0777"
+ansible dev -b -m package -a "name=git state=installed"
+ansible dev -b -m package -a "name=docker state=installed"
+ansible dev -b -m shell -a "docker pull httpd"
+ansible dev -b -m shell -a "docker run -d --name container httpd"
+ansible dev -b -m command -a "git clone https://github.com/kavyaraj1/kav.git"
+
+
+
